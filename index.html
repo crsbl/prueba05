@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_responsive.css">
+</head>
+<body>
+    
+<div class="d_general00">
+
+
+    <div id='ventana_carrito' class="d_muestra_carrito00">
+<h1 class="h1_carrito00">Items carrito</h1>
+
+<div id='contenedor_carrito_items' class="d_muestra_carrito01"></div>
+
+    </div>
+
+
+
+
+<header>
+<h1 class="h1_header00">
+    Prueba Bsale
+</h1>
+
+<div class="d_carrito00" onclick="llamar_carrito();">
+    <h3 class="h1_00">Carrito</h3>
+    <div class="d_carrito01"></div>
+</div>
+
+</header>
+
+
+
+    
+<div class="d_centro00">
+    
+    <div class="d_buscar00">
+
+        <div class="d_inp00">
+        <h1 class="h1_00">Buscar</h1>
+        <input id='input_buscar'  class="inp_00" type="text" onkeyup="buscar_items(this);"></input>
+    </div>
+
+    <div  class="d_filtro00">
+      
+        <h1 class="h1_00">Filtro</h1>
+      
+        <div class="d_filtro01">
+
+        <h3 id='mostrar_slc_filtro' class="h3_slc00" onclick="mostrar_filtro();">Sin filtrar</h3>    
+
+        <div id='select_filtro'  class="d_select00">
+            <h3 class='h3_slc00' id='sin_filtrar' onclick="selecion_filtro(this);">Sin filtrar</h3>
+
+        </div>
+
+
+ 
+
+
+    </div>
+
+    </div>
+
+
+<div class="d_pag00">
+    <h1 class="h1_00">Ordenar Por</h1>
+<div id='ordenar' class="d_ordenar01">
+
+    <div class="d_filtro01">
+
+        <h3 id='mostrar_slc_orden' class="h3_slc00" onclick="mostrar_orden();">Nombre</h3>    
+
+        <div id='select_orden'  class="d_select00">
+            <h3 class='h3_slc00' id='nombre' onclick="selecion_orden(this);">Nombre</h3>
+            <h3 class='h3_slc00' id='menor' onclick="selecion_orden(this);">Menor precio</h3>
+            <h3 class='h3_slc00' id='mayor' onclick="selecion_orden(this);">Mayor precio</h3>
+        </div>
+
+
+ 
+
+
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+        
+        </div>  
+
+
+
+
+    <div id='contenedor_items' class="d_centro01">
+
+
+</div>
+
+</div>
+
+    
+</div>
+
+
+
+</body>
+
+<script src="./js/tienda00.js"></script>
+
+</html>

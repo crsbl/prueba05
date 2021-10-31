@@ -1,0 +1,45 @@
+@media only screen and (max-width:426px){
+header{
+    height:5rem;
+}
+
+
+
+    .d_centro00{
+       
+        flex-flow: column nowrap;
+       align-items: center;
+    
+    }
+
+    .d_buscar00{
+        margin: 1rem;
+            width:10rem;
+          height:min-content;
+        overflow: hidden;
+            display: flex;
+            flex-flow: column nowrap;
+           align-items: center;
+            border:solid 1px rgb(101, 142, 148);
+            
+        }
+        
+        .d_centro01{
+            width:98vw;
+       
+        flex-flow: column nowrap;
+        align-items: center;
+        }
+        .d_buscar00{
+        
+           
+        
+       
+                display: flex;
+                flex-flow: column nowrap;
+              
+                border:solid 1px rgb(101, 142, 148);
+                padding: 1rem;
+                overflow: scroll;
+            }
+}
