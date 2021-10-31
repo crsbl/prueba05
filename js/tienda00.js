@@ -113,7 +113,7 @@ const cargar_filtros = async()=>{
 
   
 
-    const res = await fetch('/php/cargar_filtros.php');
+    const res = await fetch('http://localhost/vanilla/php/cargar_filtros.php');
     const data =  JSON.parse(await res.text());
 
 
@@ -153,7 +153,7 @@ const buscar_items = async()=>{
 
 
 
-    const res = await fetch('/php/buscar_items.php',{
+    const res = await fetch('http://localhost/vanilla/php/buscar_items.php',{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify([txt_buscar.value, filtro_seleccionado, orden_seleccionado])
@@ -185,7 +185,7 @@ if(data.length > 0)
 
     <h3 class='h3_titulo00'>Descuento</h3>
     <h3 class='h3_precio00'>${dts.discount}</h3>
-   (\""+seriesdel+"\")
+ 
     <button class='btn_agregar00' onclick="agregar_items(${dts.id} ,'${dts.url_image}','${dts[1]}', ${dts.price});">Agregar</button>
     
     </div>
@@ -216,7 +216,7 @@ const cargar_items = async()=>{
     const contenedor_items = document.getElementById('contenedor_items');
 
 
-    const res = await fetch('/php/cargar_items.php');
+    const res = await fetch('http://localhost/vanilla/php/cargar_items.php');
     const data =  JSON.parse(await res.text());
 
 
