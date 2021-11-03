@@ -35,21 +35,32 @@ $orden = 'product.price DESC';
  if($json_slc[2] == 'menor')
  {
 $orden = 'product.price ASC';
+
  }
 
 
 
 if($json_slc[1]=='sin_filtrar')
 {
+    $datos00 = $conn->query("SELECT COUNT(*) FROM product WHERE product.name like '$json_slc[0]%'");
+    $conteo =  array($datos00-> fetch_array());
+    //$conteo[0][0]
+
+
     
-    $datos = $conn->query("SELECT * FROM product  WHERE product.name like '$json_slc[0]%'  ORDER BY  $orden LIMIT 0, 6" );
+    $datos = $conn->query("SELECT * FROM product  WHERE product.name like '$json_slc[0]%'  ORDER BY  $orden LIMIT $json_slc[3],6" );
     $items_tda =  array($datos-> fetch_array());
     
-    echo json_encode([$items_tda]);
+    echo json_encode([$items_tda,$conteo]);
 
 }else{
    
-    $datos = $conn->query("SELECT * FROM product  iNNER JOIN category on product.category =  category.id  WHERE product.name like '$json_slc[0]%' and product.category like '%$json_slc[1]%'  ORDER BY  $orden LIMIT 0, 6" );
+    $datos00 = $conn->query("SELECT COUNT(*) FROM product iNNER JOIN category on product.category =  category.id  WHERE product.name like '$json_slc[0]%' and product.category like '%$json_slc[1]%'");
+    $conteo =  array($datos00-> fetch_array());
+
+
+
+    $datos = $conn->query("SELECT * FROM product  iNNER JOIN category on product.category =  category.id  WHERE product.name like '$json_slc[0]%' and product.category like '%$json_slc[1]%'  ORDER BY  $orden LIMIT $json_slc[3], 6" );
     $items_tda =  array($datos-> fetch_array());
     
     echo json_encode([$items_tda]);

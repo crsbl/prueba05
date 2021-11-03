@@ -206,7 +206,7 @@ const buscar_items = async(posicion)=>{
 
 
 
-    const res = await fetch('http://localhost/vanilla/php/prueba_paginacion.php',{
+    const res = await fetch('http://localhost/vanilla/php/buscar_items.php',{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify([txt_buscar.value, filtro_seleccionado, orden_seleccionado, posicion*6])
