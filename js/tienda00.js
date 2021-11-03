@@ -164,7 +164,7 @@ const cargar_filtros = async()=>{
 
   
 
-    const res = await fetch('http://localhost/vanilla/php/cargar_filtros.php');
+    const res = await fetch('cargar_filtros.php');
     const data =  JSON.parse(await res.text());
 
 
@@ -206,7 +206,7 @@ const buscar_items = async(posicion)=>{
 
 
 
-    const res = await fetch('http://localhost/vanilla/php/buscar_items.php',{
+    const res = await fetch('buscar_items.php',{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify([txt_buscar.value, filtro_seleccionado, orden_seleccionado, posicion*6])
@@ -305,7 +305,7 @@ const cargar_items = async()=>{
     const contenedor_items = document.getElementById('contenedor_items');
 
 
-    const res = await fetch('http://localhost/vanilla/php/cargar_items.php');
+    const res = await fetch('cargar_items.php');
     const data =  JSON.parse(await res.text());
 
     
