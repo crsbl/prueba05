@@ -29,15 +29,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 0rem 0.2rem 0.1rem rgb(130, 160, 134);
 }
 .d_carrito00{
     padding: 0 0.5rem 0 0;
     height:3rem;
-    background-color: rgb(153, 191, 206);
+    background-color: rgb(185, 211, 194);
     display: flex;
     flex-flow: row nowrap; 
     align-items: center;
     transition: 0.3s;
+    border-radius: 0.3rem 0.3rem 1rem 0.3rem;
 }
 .h1_header00{
     font-size: 2rem;
@@ -47,17 +49,29 @@ font-weight: 800;
 }
 
 .d_carrito00:hover{
-    transform: translate(-0.1rem, 0);
-    background-color: rgb(209, 227, 235);
+   
+    background-color: rgb(177, 218, 201);
 }
 
 .d_carrito01{
     width:2rem;
     height:2rem;
-    border:solid 0.1rem rgb(115, 161, 134);
+    border:solid 0.1rem rgb(172, 194, 181);
+    border-radius: 5rem;
+    
+}
+.d_carrito01{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: cadetblue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+
 .d_buscar00{
+    background-color: rgb(155, 185, 170);
 margin: 1rem;
     width:10rem;
   height:min-content;
@@ -65,13 +79,16 @@ overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
    align-items: center;
-    border:solid 1px rgb(101, 142, 148);
-    padding: 0 0 1rem 0;
+    border:solid 0.1rem rgb(125, 158, 163);
+    padding: 0 0 1.2rem 0;
+    box-shadow: 0 0 0.2rem 0.1rem rgb(136, 163, 151);
+    border-radius: 0.2rem 0.2rem 2rem 0.2rem;
 }
 .d_inp00{
     margin: 0.5rem;
     display: flex;
     flex-flow: column nowrap;
+    
    
 }
 .inp_00{
@@ -79,10 +96,11 @@ overflow: hidden;
     width:8rem;
     border: 0;
     font-size: 1rem;
-    color: rgb(133, 184, 154);
+    color: rgb(131, 170, 170);
     font-weight: 700;
     outline: none;
     text-align: center;
+    border-radius: 0.2rem 0.2rem 0.5rem 0.2rem;
 }
 
 .h1_00{
@@ -128,8 +146,8 @@ margin: 2rem 0 0 0;
 .d_muestra_carrito01{
     margin: 2rem 0 0 0;
  
-    height: 30rem;
-    
+    height: 20rem;
+  
     overflow: scroll;
 }
 
@@ -141,6 +159,8 @@ margin: 2rem 0 0 0;
     background-color: rgb(221, 221, 221);
 display: flex;
 flex-flow: row nowrap;
+box-shadow: inset 0 -0.2rem 0.1rem 0.1rem rgb(135, 179, 158);
+border-radius: 0.2rem 0.2rem 0.5rem 0.2rem;
 
 }
 
@@ -161,6 +181,7 @@ flex-flow: row nowrap;
   transition: 1s;
   }
   .d_item_carrito00{
+      width:17rem;
       transition: 0.3s;
       height:4rem;
       border-bottom:solid 0.1rem white;
@@ -169,25 +190,62 @@ flex-flow: row nowrap;
   }
 
 .d_item_carrito00:hover{
-    background-color: rgba(142, 165, 168, 0.671);
+    background-color: rgba(220, 226, 209, 0.671);
 }
 
+.d_item_carrito00:hover > .h3_carrito_item_nombre00 {
+   display: none;
+}
 
+.d_item_carrito00:hover > .h3_carrito_item_precio00 {
+    display: none;
+ }
+
+ .d_item_carrito00:hover > .d_quitar_item_carrito {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+ }
+
+.btn_carrito00{
+    border:0;
+    border-bottom:0.1rem solid rgb(153, 190, 181);
+    margin:1rem 0 00 ;
+    box-shadow: 0 0 0.3rem 0.3rem rgb(155, 155, 155);
+    color: rgb(216, 226, 245);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    background-color: rgb(174, 194, 186);
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    transition: 0.3s;
+   
+}
+
+.btn_carrito00:hover{
+    background-color: rgb(179, 209, 197);
+}
 
 .d_datos00{
     margin: 0.5rem;
     width:10rem;
     height:min-content;
-    border:solid 0.1rem rgb(150, 153, 132);  
+    border:solid 0.1rem rgb(183, 187, 161);  
     display: flex;
     flex-flow: column nowrap;
     padding: 0 0 0.5rem 0;
     align-items: center;
   transition: 0.3s;
+box-shadow: 0.1rem 0 0.3rem 0.1rem rgb(199, 195, 187);
+border-radius: 0.2rem 0.2rem 1rem 0.2rem; 
 }
 
 .d_datos00:hover{
     transform: translate(0rem, 0.1rem);
+  
 }
 
 
@@ -228,6 +286,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     height:4rem;
  
 }
+
+
+
+
+
+
 .h3_nombre00{
     overflow: hidden;
     text-align: center;
@@ -323,12 +387,14 @@ align-items: center;
    color: rgb(86, 134, 120);
    white-space: pre;
    overflow: hidden;
-   background-color: ivory;
+   background-color: rgb(208, 218, 203);
+   transition: 0.3s;
    
 }
 
 .h3_slc00:hover{
     cursor: pointer;
+    background-color: rgb(194, 219, 203);
 }
 
 
@@ -355,7 +421,7 @@ align-items: center;
 }
 
 .d_pag01{
-    border:solid 0.1rem rgb(88, 129, 113);
+    border:solid 0.1rem rgb(130, 153, 144);
     display: flex;
 justify-content: space-evenly;
     align-items: center;
@@ -368,13 +434,15 @@ justify-content: space-evenly;
 .btn_pagina00{
     margin:0.1rem;
     width:  1.4em;
+    font-weight: 600;
     height:1.4rem;
     border:0;
     background-color: rgb(169, 192, 191);
-    color: rgb(228, 220, 220);
+    color: rgb(240, 235, 235);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 transition:0.3s;
 text-align: center;
+border-bottom:0.1rem rgb(149, 170, 161) solid; 
 }
 
 .btn_pagina00:hover{
@@ -384,4 +452,12 @@ text-align: center;
 
 .btn_pagina00_seleccionado{
     background-color: rgb(62, 133, 136);
+}
+
+.d_quitar_item_carrito{
+    display: none;
+    color:white;
+font-size: 1.5rem;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 700;
 }

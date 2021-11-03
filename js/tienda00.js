@@ -1,4 +1,14 @@
+//cargar conteo items carrito
+const conteo_items_carrito = ()=>{
 
+    const array_localstorage =  JSON.parse(window.localStorage.getItem('crrto'));
+let h3_conteo_item = document.getElementById('h3_conteo_items') ;
+
+console.log(array_localstorage.length);
+
+        h3_conteo_item.innerText=array_localstorage.length;
+  
+}
 
 
 //esta funcion hace aparecer el carrito dando en width y overflow
@@ -23,7 +33,7 @@ else
 
 }
 
-
+//al click en el item del carrito se aplicara la funcion
 const quitar_item_carro =(id)=>{
 
     const array_localstorage =  JSON.parse(window.localStorage.getItem('crrto'));
@@ -55,6 +65,7 @@ window.localStorage.setItem('crrto', JSON.stringify(nuevo_array_local))
 
 
 cargar_carrito();
+conteo_items_carrito();
 }
 
 
@@ -80,8 +91,10 @@ if(array_localstorage)
     <h3 class='h3_carrito_item_nombre00'>${array_local[2]}</h3>
     <h3 class='h3_carrito_item_precio00'>${array_local[3]}</h3>
 
-
+<div class='d_quitar_item_carrito'>Quitar item</div>
    
+
+
     </div>
     `});
 }
@@ -96,7 +109,9 @@ if(array_localstorage)
 
 
 
+
 }
+
 
 
 
@@ -137,6 +152,7 @@ else
 
 }
 cargar_carrito();
+conteo_items_carrito();
 }
 
 
@@ -367,3 +383,4 @@ const mostrar_orden = ()=>{
 cargar_filtros();
 cargar_items();
 cargar_carrito();
+conteo_items_carrito();
