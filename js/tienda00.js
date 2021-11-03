@@ -1,12 +1,7 @@
 
 
 
-
-let pagina_actual = 0;
-
-
-
-//esta funcion hace aparecer el carrito dandole in width y overflow
+//esta funcion hace aparecer el carrito dando en width y overflow
 ventana_carrito_estado = false;
 const llamar_carrito = ()=>{
 
@@ -27,7 +22,42 @@ else
 }
 
 }
- 
+
+
+const quitar_item_carro =(id)=>{
+
+    const array_localstorage =  JSON.parse(window.localStorage.getItem('crrto'));
+
+    let nuevo_array_local = [];
+
+    
+
+  for (let i = 0; i < array_localstorage.length; i++) {
+   
+   
+
+
+    if(array_localstorage[i][0]== id)
+
+{
+    console.log('es' + array_localstorage[i][0])
+}
+else 
+{
+    nuevo_array_local.push(array_localstorage[i])
+}
+
+}
+
+console.log(nuevo_array_local);
+
+window.localStorage.setItem('crrto', JSON.stringify(nuevo_array_local))
+
+
+cargar_carrito();
+}
+
+
 //carga los objetos de localstorage 
 const cargar_carrito = ()=>{
      
@@ -40,13 +70,19 @@ if(array_localstorage)
 {
     console.log(array_localstorage);
 
-    contenedor_items_carrito.innerHTML = [[array_localstorage][0]].map((array_local)=>{return`
+    contenedor_items_carrito.innerHTML = array_localstorage.map((array_local)=>{return`
     
-    <div>${array_local[0]}</div>
-    <div>${array_local[1]}</div>
-    <div>${array_local[2]}</div>
-    <div>${array_local[3]}</div>
+    <div id ='${array_local[0]}' class='d_item_carrito00' onclick='quitar_item_carro(this.id);'>
+  
+    <img class='img_datos01' src='${array_local[1]}'></img>
 
+ 
+    <h3 class='h3_carrito_item_nombre00'>${array_local[2]}</h3>
+    <h3 class='h3_carrito_item_precio00'>${array_local[3]}</h3>
+
+
+   
+    </div>
     `});
 }
 
@@ -63,29 +99,44 @@ if(array_localstorage)
 }
 
 
+
+
+
 //suma items al localstorage, recibe las variables del items desde  la funcion cargar_items()
 const agregar_items = (id, url_image,nombre, precio)=>{
 
-
-
-
-
 const array_localstorage =  JSON.parse(window.localStorage.getItem('crrto'));
-                          
+          
 if(array_localstorage)
 {
-    console.log([[array_localstorage][0]]);
-    console.log([[array_localstorage][0]].filter((asd)=>{asd[0] == id}));
   
+agregado= false;
+
+
+
+
+for (let i = 0; i < array_localstorage.length; i++) {
+ 
+if(array_localstorage[i][0] == id)
+{
+    agregado = true; 
 }
+
+
+}
+
+if(agregado== false)
+{
+    console.log('no a sido agregado');
+    window.localStorage.setItem('crrto', JSON.stringify([...array_localstorage,[id, url_image, nombre, precio]]))}
+}
+
 else
 {
-    window.localStorage.setItem('crrto', JSON.stringify([id, url_image, nombre, precio]))
+    window.localStorage.setItem('crrto', JSON.stringify([[id, url_image, nombre, precio]]))
+
 }
-
-
-
-
+cargar_carrito();
 }
 
 
@@ -95,7 +146,7 @@ const selecion_filtro =(e)=>{
     filtro_seleccionado =e.id;
 document.getElementById('mostrar_slc_filtro').innerHTML=(e.innerHTML);
 document.getElementById('select_filtro').style.height='0'
-buscar_items()
+buscar_items(0)
 }
 //manda el orden y muestra lo seleccionado al hacer click en el()
 let orden_seleccionado = 'nombre';
@@ -103,7 +154,7 @@ const selecion_orden =(e)=>{
     orden_seleccionado =e.id;
 document.getElementById('mostrar_slc_orden').innerHTML=(e.innerHTML);
 document.getElementById('select_orden').style.height='0'
-buscar_items()
+buscar_items(0)
 }
 //carga los filtros desde la bd
 let estado_filtro = false;
@@ -138,8 +189,10 @@ contenedor_filtros.innerHTML += data.map((dts)=>{return `
 }
 
 
+
+let posicion_pag = 0;
 //funcion para consultar y mostrar items de la bd 
-const buscar_items = async()=>{
+const buscar_items = async(posicion)=>{
 
     txt_buscar = document.getElementById('input_buscar');
  
@@ -153,22 +206,28 @@ const buscar_items = async()=>{
 
 
 
-    const res = await fetch('http://localhost/vanilla/php/buscar_items.php',{
+    const res = await fetch('http://localhost/vanilla/php/prueba_paginacion.php',{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
-        body:JSON.stringify([txt_buscar.value, filtro_seleccionado, orden_seleccionado])
+        body:JSON.stringify([txt_buscar.value, filtro_seleccionado, orden_seleccionado, posicion*6])
     });
 
     const data =  await res.text();
 
-console.log(data);
+console.log(data+'dd');
 
 if(data.length > 0)
 {
 
+
+
     let json_data = JSON.parse(data);
 
 
+
+
+
+cargar_paginacion(json_data[1][0][0],posicion)
 
     contenedor_items.innerHTML = json_data[0].map((dts)=>{
 
@@ -205,6 +264,36 @@ if(data.length > 0)
 
 }
 
+
+
+const cargar_paginacion =(nmro, posicion)=>{
+
+let contenedor_paginas = document.getElementById('contenedor_paginas');
+
+contenedor_paginas.innerHTML ='';
+
+let cantidad_paginas = null;
+
+
+
+if(nmro % 6 == 0)
+{cantidad_paginas = Math.trunc(nmro/6)}
+else
+{cantidad_paginas= Math.trunc(nmro/6) + 1}
+
+contador = 0;
+
+console.log(cantidad_paginas);
+
+for (let i = 0; i < cantidad_paginas; i++) {
+   
+    contenedor_paginas.innerHTML += `<button class='btn_pagina00  ${i ==posicion ? 'btn_pagina00_seleccionado' : ''}'  onclick="buscar_items(${i});" >${i+1}</button>`
+    
+}
+
+}
+
+
 //muestra los items en la primera carga de la pagina y para actualizar
 const cargar_items = async()=>{
 
@@ -219,11 +308,14 @@ const cargar_items = async()=>{
     const res = await fetch('http://localhost/vanilla/php/cargar_items.php');
     const data =  JSON.parse(await res.text());
 
+    
+
+
 
     contenedor_items.innerHTML ='';
-console.log(data)
 
-    contenedor_items.innerHTML = data.map((dts)=>{return `
+
+    contenedor_items.innerHTML = data[0].map((dts)=>{return `
     <div class="d_datos00" >
     <img class="img_datos00" src="${dts.url_image}"></img>
     <h3 class='h3_nombre00'>${dts[1]}</h3>
@@ -239,7 +331,7 @@ console.log(data)
     </div>
     `});
 
-
+    cargar_paginacion(data[1],0)
 }
 
 

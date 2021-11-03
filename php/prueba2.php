@@ -21,7 +21,7 @@ $conteo =  array($datos00-> fetch_array());
 
 
 
-$datos01 = $conn->query("SELECT * FROM product ORDER BY  product.name LIMIT 0, 6");
+$datos01 = $conn->query("SELECT * FROM product LIMIT 53, 6");
 $itms01 =  array($datos01-> fetch_array());
 
 echo json_encode([$itms01,$conteo[0][0]]);

@@ -127,11 +127,14 @@ margin: 2rem 0 0 0;
 
 .d_muestra_carrito01{
     margin: 2rem 0 0 0;
-    width:15rem;
-    height: 20rem;
-    border: solid 0.2rem rgb(216, 219, 218);
+ 
+    height: 30rem;
+    
     overflow: scroll;
 }
+
+
+
 .d_centro01{
     width:67.2rem;
     height:30rem;
@@ -140,6 +143,36 @@ display: flex;
 flex-flow: row nowrap;
 
 }
+
+.d_muestra_carrito01::-webkit-scrollbar-thumb {
+
+    background-color: rgb(203, 213, 223);
+    border-radius: 0.3rem;
+    transition: 1s;
+    box-shadow: -0.5vh 0vh 1vh 0.0vh rgba(93, 111, 114, 0.075);
+  
+  
+  }
+  
+  .d_muestra_carrito01::-webkit-scrollbar {
+  width: 1rem;   
+  height: 0;   
+  
+  transition: 1s;
+  }
+  .d_item_carrito00{
+      transition: 0.3s;
+      height:4rem;
+      border-bottom:solid 0.1rem white;
+      display: flex;
+      flex-flow: row nowrap;
+  }
+
+.d_item_carrito00:hover{
+    background-color: rgba(142, 165, 168, 0.671);
+}
+
+
 
 .d_datos00{
     margin: 0.5rem;
@@ -164,7 +197,37 @@ flex-flow: row nowrap;
     height:8rem;
  
 }
+.h3_carrito_item_nombre00{
+    padding: 0.2rem 0 0 0;
+    width:9rem;
+color:rgb(217, 223, 222);
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ text-align: center;
+    overflow: hidden;
+    font-size: 1rem;
 
+}
+
+.h3_carrito_item_precio00{
+    width:4rem;
+ color: rgb(211, 208, 208);
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+ display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h3_carrito_item_precio00::before{
+    content: '$';
+}
+
+
+.img_datos01{
+
+    width:4rem;
+    height:4rem;
+ 
+}
 .h3_nombre00{
     overflow: hidden;
     text-align: center;
@@ -284,3 +347,41 @@ align-items: center;
     height:1.5rem;
 }
 
+.d_pag00{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.d_pag01{
+    border:solid 0.1rem rgb(88, 129, 113);
+    display: flex;
+justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0.1rem;
+    width:8rem; 
+
+}
+
+.btn_pagina00{
+    margin:0.1rem;
+    width:  1.4em;
+    height:1.4rem;
+    border:0;
+    background-color: rgb(169, 192, 191);
+    color: rgb(228, 220, 220);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+transition:0.3s;
+text-align: center;
+}
+
+.btn_pagina00:hover{
+    cursor: pointer;
+    background-color: rgb(89, 156, 158);
+}
+
+.btn_pagina00_seleccionado{
+    background-color: rgb(62, 133, 136);
+}
