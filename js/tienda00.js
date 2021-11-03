@@ -305,7 +305,7 @@ const cargar_items = async()=>{
     const contenedor_items = document.getElementById('contenedor_items');
 
 
-    const res = await fetch('./php/cargar_items.php');
+    const res = await fetch('cargar_items.php');
     const data =  JSON.parse(await res.text());
 
     
