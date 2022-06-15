@@ -4,6 +4,9 @@ export default (textoFiltro) => {
   
   let estadoFiltro = false;
   const filtro = (e) => {
+    if(e.target.id ==="inputFiltro"){return}
+
+
     const containerDatosOpciones = document.getElementById(
       "containerOpcionesFiltro"
     );
@@ -23,6 +26,7 @@ export default (textoFiltro) => {
         inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
         textoFiltro =e.target.innerText;
         console.log(e);
+     
         break;
 
       default:
@@ -32,7 +36,6 @@ export default (textoFiltro) => {
   };
 
   document.getElementById("inputFiltro").addEventListener("click", filtro);
-  document.getElementById("inputFiltro").addEventListener("mousedown", ()=>false);
   document
     .getElementById("h4opcionFiltroTodo")
     .addEventListener("click", filtro);
