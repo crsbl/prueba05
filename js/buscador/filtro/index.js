@@ -20,9 +20,9 @@ export default (textoFiltro) => {
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
         inpFiltro.value = e.target.innerText;
-        if(e.target.innerText =""){inpFiltro.value = "Todo";} ;
         inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
         textoFiltro =e.target.innerText;
+        console.log(e);
         break;
 
       default:
