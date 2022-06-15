@@ -19,7 +19,7 @@ export default (textoFiltro) => {
         console.log("aqqq", e.target.innerText);
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
-        inpFiltro.innerHTML = e.target.innerText;
+        inpFiltro.value = e.target.innerText;
         inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
         textoFiltro =e.target.innerText;
         break;
