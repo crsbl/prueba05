@@ -15,8 +15,8 @@ const App = () => {
   filtro(textofiltro);
 
 
-  if(document.getElementById("inputFiltro").value ==""){
-    document.getElementById("inputFiltro").value =="Todo"
+  if(document.getElementById("inputFiltro").value ===""){
+    document.getElementById("inputFiltro").value ="Todo"
   }
 };
 
