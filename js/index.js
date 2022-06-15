@@ -13,7 +13,7 @@ const App = () => {
   cargarProductos( textoBuscar, textofiltro, ordenPor);
   ordenarPor(ordenPor);
   filtro(textofiltro);
-document.getElementById('inputFiltro').innerHTML ="asd";
+
 };
 
 App();
