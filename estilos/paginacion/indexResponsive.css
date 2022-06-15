@@ -22,5 +22,7 @@ font-size: 1rem;
  background-color: rgb(201, 197, 162);
  padding:0;
  border-radius: .5rem  1rem .5rem 1rem;
+ flex-flow: row wrap;
  }
+
 }
