@@ -8,7 +8,7 @@ export default (textoFiltro) => {
       "containerOpcionesFiltro"
     );
     const inpFiltro = document.getElementById("inputFiltro");
-
+    inpFiltro.value = "Todo";
     switch (estadoFiltro) {
       case false:
         containerDatosOpciones.style.display = "block";
