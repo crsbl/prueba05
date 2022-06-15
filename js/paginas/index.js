@@ -39,7 +39,7 @@ export default (cantidadDatos) => {
       parseInt(ordenActual),
       paginaActual
     );
-    paginaActual= 0;
+
   };
 
   for (let i = 0; i < cantidadPaginas; i++) {
@@ -53,4 +53,5 @@ export default (cantidadDatos) => {
     buttonCambiarPagina.addEventListener("click", cambiarPagina);
     contenedorPaginas.appendChild(buttonCambiarPagina);
   }
+  paginaActual= 0;
 };
