@@ -20,7 +20,7 @@ export default (textoOrdenarPor) => {
         inpOrdenarPor.value = e.target.innerText;
         textoOrdenarPor= e.target.innerText;
         inpOrdenarPor.setAttribute("name",`nameInputOrdenarPor${e.target.id.slice(18)}`);
-        if(inpOrdenarPor.value ===""){inpFiltro.value = "Todo"}
+        if(inpOrdenarPor.value ===""){inpOrdenarPor.value = "Nombre"}
         break;
 
       default:
