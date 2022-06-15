@@ -13,6 +13,7 @@ export default (textoFiltro) => {
       case false:
         containerDatosOpciones.style.display = "block";
         estadoFiltro = true;
+        inpFiltro.value ="Todo"
         break;
 
       case true:
