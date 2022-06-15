@@ -107,7 +107,7 @@ border-radius: .2rem;
   outline: none;
   text-align: center;
   border: 0;
-  border-radius: .3rem ;
+  border-radius: .3rem  .3rem 0 0;
 }
 
 .divContenedorOrdenarPor > input:hover {
@@ -117,17 +117,20 @@ border-radius: .2rem;
   width: 70%;
   overflow: hidden;
   display: none;
-
+transition: .3s;
 }
 
 .divcontainerOpciones > h4:hover {
   cursor: pointer;
-
+  background-color: #d4d0be;
 }
 .divcontainerOpciones > h4 {
-  color: rgb(82, 100, 97);
+  transition: .3s;
+  color: rgb(136, 126, 93);
   font-weight: 800;
   font-size: 1.3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
   outline: none;
   text-align: center;
   border: 0;

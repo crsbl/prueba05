@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+  .divContenedorProductos {
+    flex-flow: row wrap !important;
+    width: 100vw;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0;
+  }
+  
+}
