@@ -29,7 +29,7 @@ export default (textoFiltro) => {
       default:
         break;
     }
-    buscarProducto(e.target.value, textofiltro, ordenPor, 0);
+ 
   };
 
   document.getElementById("inputFiltro").addEventListener("click", filtro);
