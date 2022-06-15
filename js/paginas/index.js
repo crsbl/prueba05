@@ -1,9 +1,9 @@
 import buscarProducto from "../acciones/buscarProductos/index.js";
-
-export default (cantidadDatos) => {
-  let paginaActual = 0;
+let paginaActual = 0;
   let filtroActual = "Todo";
   let ordenActual = "Nombre";
+export default (cantidadDatos) => {
+  
 
   let cantidadPaginas = null;
   const contenedorPaginas = document.getElementById("contenedorPaginas");
@@ -39,6 +39,7 @@ export default (cantidadDatos) => {
       parseInt(ordenActual),
       paginaActual
     );
+    paginaActual= 0;
   };
 
   for (let i = 0; i < cantidadPaginas; i++) {
