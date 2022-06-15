@@ -1,9 +1,10 @@
 import buscarProducto from "../acciones/buscarProductos/index.js";
 
-let paginaActual = 0;
-let filtroActual = "Todo";
-let ordenActual = "Nombre";
 export default (cantidadDatos) => {
+  let paginaActual = 0;
+  let filtroActual = "Todo";
+  let ordenActual = "Nombre";
+
   let cantidadPaginas = null;
   const contenedorPaginas = document.getElementById("contenedorPaginas");
   contenedorPaginas.innerHTML = "";
@@ -31,7 +32,7 @@ export default (cantidadDatos) => {
       filtroActual = textofiltro.name.slice(15);
     }
 
-    console.log(filtroActual, ordenActual,paginaActual);
+    console.log(filtroActual, ordenActual, paginaActual);
     buscarProducto(
       textobuscar.value,
       filtroActual,
