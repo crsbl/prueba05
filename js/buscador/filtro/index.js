@@ -23,6 +23,7 @@ export default (textoFiltro) => {
         inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
         textoFiltro =e.target.innerText;
         console.log(e);
+        if(e.type ==="click"){inpFiltro.value = "Todo"}
         break;
 
       default:
