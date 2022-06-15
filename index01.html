@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/index.css" />
+    <link rel="stylesheet" href="estilos/indexResponsive.css" />
+    <link rel="stylesheet" href="estilos/buscador/index.css" />
+    <link rel="stylesheet" href="estilos/header/index.css" />
+    <link rel="stylesheet" href="estilos/productos/index.css" />
+    <link rel="stylesheet" href="estilos/constantes.css" />
+    <link rel="stylesheet" href="estilos/paginacion/index.css" />
+  </head>
+  <body class="flexColumn">
+    <header class="flexRow">
+      <h1>Test Bsale</h1>
+      <div class="divContenedorCarro00"></div>
+    </header>
+
+    <main class="flexRow">
+      
+      <div class="divContenedorBuscador00">
+            <div class="divContenedorBuscador01 flexColumn">
+                <h4>Buscar</h4>
+                <input
+                id='inputBuscarProducto'
+                />
+                <button id='buttonBuscar'>Buscar</button>
+            </div> 
+            <div class="divContenedorFiltro flexColumn">
+              <h4 id>Filtro</h4>
+              <input
+              id="inputFiltro"
+              value="Todo"
+              />
+              <div class="divcontainerOpciones flexcolumn" id="containerOpcionesFiltro">
+                <h4 id="h4opcionFiltroTodo">Todo</h4>
+              </div>
+            </div>
+
+            <div class="divContenedorOrdenarPor flexColumn">
+              <h4>Ordenar por</h4>
+              <input
+              id="inputOrdenarPor"
+              value="Nombre"
+              />
+              <div class="divcontainerOpciones flexcolumn" id="containerOpcionesOrdenarPor">
+         
+              </div>
+
+            </div>
+           
+        </div>
+     
+        <div class="divContenedorProductos flexRowWrap" id="contenedorProductos"></div>
+      
+    </main>
+    <div  class="divContenedorPaginas00 flexColumn">
+      <h4>Paginas</h4>
+      <div id="contenedorPaginas" class=" divContenedorPaginas01 flexRow ">
+   
+      </div>
+
+    </div>
+
+
+    <footer></footer>
+  </body>
+  <script type="module" src="./js/index.js"></script>
+</html>

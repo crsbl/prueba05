@@ -178,7 +178,6 @@ const cargar_filtros = async()=>{
 
     const contenedor_filtros = document.getElementById('select_filtro');
 
-  
 
     const res = await fetch('/php/cargar_filtros.php');
     const data =  JSON.parse(await res.text());

@@ -1,0 +1,116 @@
+.divContenedorBuscador00 {
+  width: 14rem;
+  background-color: rgb(76, 89, 109);
+}
+.divContenedorBuscador01 {
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+}
+.divContenedorBuscador01 > input {
+  color: #cac4a8;
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 70%;
+  outline: none;
+  text-align: center;
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+.divContenedorBuscador01 > h4 {
+  padding: 0.5rem;
+  color: rgb(219, 223, 222);
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.divContenedorBuscador01> button{
+margin: .4rem 0 0 0;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: .3rem;
+font-size: 1.1rem;
+font-weight: 800;
+color: rgb(169, 188, 209);
+background-color: rgb(80, 126, 163);
+border-radius:.2rem;
+border:0;
+transition: .3s;
+}
+
+.divContenedorBuscador01> button:hover{
+  
+  background-color: rgb(54, 93, 126);
+transform: translate(.3rem ,0);
+  }
+.divContenedorFiltro {
+  align-items: center;
+}
+
+.divContenedorFiltro > h4 {
+  padding: 0.5rem;
+  color: rgb(219, 223, 222);
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.divContenedorFiltro > input {
+  color: rgb(209, 192, 116);
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 70%;
+  outline: none;
+  text-align: center;
+  border: 0;
+  border-radius: .3rem .3rem 0 0;
+  cursor: pointer;
+}
+.divContenedorOrdenarPor {
+  align-items: center;
+}
+.divContenedorOrdenarPor > h4 {
+  padding: 0.5rem;
+  color: rgb(219, 223, 222);
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.divContenedorOrdenarPor > input {
+  color: rgb(209, 192, 116);
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 70%;
+  outline: none;
+  text-align: center;
+  border: 0;
+  border-radius: .3rem ;
+}
+
+.divContenedorOrdenarPor > input:hover {
+  cursor: pointer;
+}
+.divcontainerOpciones {
+  width: 70%;
+  overflow: hidden;
+  display: none;
+  
+}
+
+.divcontainerOpciones > h4:hover {
+  cursor: pointer;
+
+}
+.divcontainerOpciones > h4 {
+  color: rgb(102, 146, 135);
+  font-weight: 800;
+  font-size: 1.3rem;
+  outline: none;
+  text-align: center;
+  border: 0;
+  
+  background-color: aliceblue;
+}

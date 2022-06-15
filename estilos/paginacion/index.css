@@ -1,0 +1,30 @@
+.divContenedorPaginas00{
+    align-items: center;
+    gap:.4rem;
+}
+.divContenedorPaginas00 > h4{
+    color: rgb(141, 124, 124);
+    font-weight: 800;
+    font-size: 1.5rem;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.divContenedorPaginas01 > button{
+    padding: .5rem;
+ color: rgb(202, 182, 153);
+ font-weight: 800;
+font-size: 1.2rem;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.divContenedorPaginas01{
+   gap:.3rem;
+
+}
+
+.buttonPaginaActual{
+background-color:rgb(116, 158, 144);
+border:0;
+}
