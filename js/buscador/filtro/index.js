@@ -8,7 +8,7 @@ export default (textoFiltro) => {
       "containerOpcionesFiltro"
     );
     const inpFiltro = document.getElementById("inputFiltro");
-    if(!e){inpFiltro.value = "Todo";} ;
+  
     switch (estadoFiltro) {
       case false:
         containerDatosOpciones.style.display = "block";
@@ -20,6 +20,7 @@ export default (textoFiltro) => {
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
         inpFiltro.value = e.target.innerText;
+        if(e.target.innerText =""){inpFiltro.value = "Todo";} ;
         inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
         textoFiltro =e.target.innerText;
         break;
