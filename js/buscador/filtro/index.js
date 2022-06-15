@@ -4,7 +4,7 @@ export default (textoFiltro) => {
   
   let estadoFiltro = false;
   const filtro = (e) => {
-    if(e.target.id ==="inputFiltro"){return}
+
 
 
     const containerDatosOpciones = document.getElementById(
@@ -19,6 +19,7 @@ export default (textoFiltro) => {
         break;
 
       case true:
+        if(e.target.id ==="inputFiltro"){return}
         console.log("aqqq", e.target.innerText);
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
