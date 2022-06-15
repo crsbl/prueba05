@@ -14,10 +14,6 @@ const App = () => {
   ordenarPor(ordenPor);
   filtro(textofiltro);
 
-
-  if(document.getElementById("inputFiltro").value ===""){
-    document.getElementById("inputFiltro").value ="Todo"
-  }
 };
 
 App();
