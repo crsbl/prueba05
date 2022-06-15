@@ -1,20 +1,26 @@
 .divContenedorBuscador00 {
   width: 14rem;
+height:100%;
+padding: 0 0 1rem 0;
+border-radius: .2rem;
   background-color: rgb(76, 89, 109);
+  border: solid .1rem rgb(93, 142, 161);
 }
 .divContenedorBuscador01 {
   align-items: center;
   padding: 1rem 0 0.5rem 0;
+
 }
 .divContenedorBuscador01 > input {
-  color: #cac4a8;
+  background-color:antiquewhite;
+  color: #a19b81;
   font-weight: 800;
   font-size: 1.2rem;
   width: 70%;
   outline: none;
   text-align: center;
   border: 0;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .divContenedorBuscador01 > h4 {
@@ -29,35 +35,44 @@
 .divContenedorBuscador01> button{
 margin: .4rem 0 0 0;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-padding: .3rem;
+padding: .2rem 3rem .2rem 3rem;
 font-size: 1.1rem;
 font-weight: 800;
-color: rgb(169, 188, 209);
+color: rgb(159, 189, 221);
 background-color: rgb(80, 126, 163);
-border-radius:.2rem;
+border-radius:.1rem;
 border:0;
 transition: .3s;
+border-left:solid .1rem rgb(107, 134, 158);
+border-bottom:solid .1rem rgb(107, 134, 158);
 }
 
 .divContenedorBuscador01> button:hover{
-  
-  background-color: rgb(54, 93, 126);
+  background-color: rgb(93, 138, 175);
+
 transform: translate(.3rem ,0);
   }
 .divContenedorFiltro {
   align-items: center;
+
+  padding: .5rem;
 }
 
 .divContenedorFiltro > h4 {
-  padding: 0.5rem;
-  color: rgb(219, 223, 222);
+margin: 0 0 .2rem 0;
+padding: 0 3rem 0 3rem ;
+border-radius: .2rem;
+  text-align: center;
+  color: rgb(125, 180, 166);
   font-weight: 800;
   font-size: 1.2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
 }
 .divContenedorFiltro > input {
-  color: rgb(209, 192, 116);
+  background-color:antiquewhite;
+  color: #a19b81;
   font-weight: 800;
   font-size: 1.2rem;
   width: 70%;
@@ -69,10 +84,14 @@ transform: translate(.3rem ,0);
 }
 .divContenedorOrdenarPor {
   align-items: center;
+
+  padding: .5rem;
 }
 .divContenedorOrdenarPor > h4 {
+
   padding: 0.5rem;
-  color: rgb(219, 223, 222);
+  color: rgb(125, 180, 166);
+ 
   font-weight: 800;
   font-size: 1.2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -80,7 +99,8 @@ transform: translate(.3rem ,0);
 }
 
 .divContenedorOrdenarPor > input {
-  color: rgb(209, 192, 116);
+  background-color:antiquewhite;
+  color: #a19b81;
   font-weight: 800;
   font-size: 1.2rem;
   width: 70%;
@@ -97,7 +117,7 @@ transform: translate(.3rem ,0);
   width: 70%;
   overflow: hidden;
   display: none;
-  
+
 }
 
 .divcontainerOpciones > h4:hover {
@@ -105,12 +125,11 @@ transform: translate(.3rem ,0);
 
 }
 .divcontainerOpciones > h4 {
-  color: rgb(102, 146, 135);
+  color: rgb(82, 100, 97);
   font-weight: 800;
   font-size: 1.3rem;
   outline: none;
   text-align: center;
   border: 0;
-  
-  background-color: aliceblue;
+  background-color: #b6b2a1;
 }
